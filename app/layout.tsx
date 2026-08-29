@@ -103,7 +103,7 @@ export default function RootLayout({
         {/* Providers wrapper handles Theme, Auth Context, React Query, etc. */}
         <Providers>
           <NavbarServer />
-          <main className="flex-1 flex flex-col relative w-full isolate h-screen">
+          <main className="flex-1 flex flex-col relative w-full isolate min-h-screen">
             {children}
           </main>
           <Footer />
