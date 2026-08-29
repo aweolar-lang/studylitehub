@@ -7,6 +7,7 @@ export default async function NavbarServer() {
   // Toggle this to true/false to see the logged-in vs logged-out UI
   const mockSession = null; 
   // const mockSession = { user: { name: "Denis", email: "denis@example.com" } };
+  //thanks
 
   return <NavbarClient session={mockSession} />;
 }
