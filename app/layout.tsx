@@ -2,13 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-// We'll create these next - using placeholders for now
 import { Providers } from "@/providers/Providers"; 
 import NavbarServer from "@/components/NavbarServer";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
-// 1. Premium Typography
+// 1. Typography
 const fontSans = Plus_Jakarta_Sans({ 
   subsets: ["latin"],
   variable: "--font-sans",
@@ -27,35 +26,35 @@ export const viewport: Viewport = {
   userScalable: false, // Prevents layout breaks on mobile input focus
 };
 
-// 3. Production-Grade SEO Metadata
+// 3. SEO Metadata
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://studylite.com"),
-  applicationName: "Studylite", // Tells Google the exact App Name for Search Results
+  applicationName: "StudyHub", // Tells Google the exact App Name for Search Results
   title: {
-    default: "Studylite | The Global Academic Ecosystem",
-    template: "%s | Studylite",
+    default: "StudyHub | The Global Academic Ecosystem",
+    template: "%s | StudyHub",
   },
   description: "The global nexus for ambitious learners, elite educators, and pioneering researchers. Master your curriculum and publish groundbreaking research.",
   keywords: ["academic ecosystem", "verified tutors", "research publications", "online assessments", "study guides"],
-  authors: [{ name: "Studylite Inc.", url: "https://studylite.com/about" }],
-  creator: "Studylite",
+  authors: [{ name: "StudyHub Inc.", url: "https://studylite.com/about" }],
+  creator: "StudyHub",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Studylite",
-    title: "Studylite | The Global Academic Ecosystem",
+    siteName: "StudyHub",
+    title: "StudyHub | The Global Academic Ecosystem",
     description: "Where intellect meets limitless opportunity. Join the global academic nexus.",
     images: [{
       url: "/og-image.jpg", 
       width: 1200,
       height: 630,
-      alt: "Studylite Dashboard Preview",
+      alt: "StudyHub Dashboard Preview",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studylite | The Global Academic Ecosystem",
+    title: "StudyHub | The Global Academic Ecosystem",
     description: "Where intellect meets limitless opportunity.",
     images: ["/twitter-image.jpg"],
   },
@@ -82,7 +81,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Studylite",
+    "name": "StudyHub by Localsoko",
     "url": "https://studylite.com",
     "potentialAction": {
       "@type": "SearchAction",
@@ -104,7 +103,7 @@ export default function RootLayout({
         {/* Providers wrapper handles Theme, Auth Context, React Query, etc. */}
         <Providers>
           <NavbarServer />
-          <main className="flex-1 flex flex-col relative w-full isolate">
+          <main className="flex-1 flex flex-col relative w-full isolate h-screen">
             {children}
           </main>
           <Footer />
