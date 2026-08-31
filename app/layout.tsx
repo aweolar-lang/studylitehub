@@ -3,8 +3,8 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 import { Providers } from "@/providers/Providers"; 
-import NavbarServer from "@/components/NavbarServer";
-import Footer from "@/components/Footer";
+import NavbarServer from "@/components/layout/NavbarServer";
+import Footer from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
 // 1. Typography

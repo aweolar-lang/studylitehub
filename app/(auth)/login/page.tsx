@@ -2,7 +2,7 @@
 'use client';
 
 import { useActionState } from "react";
-import { handleLogin } from "@/actions/login";
+import { handleLogin } from "@/actions/auth/login";
 
 export default function LoginPage() {
   // useActionState manages the state returned by the Server Action
