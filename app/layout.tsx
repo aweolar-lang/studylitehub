@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 
 // 3. SEO Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://studylite.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://studylite.online" || "https://studyhub.localsoko.com"),
   applicationName: "StudyHub", // Tells Google the exact App Name for Search Results
   title: {
     default: "StudyHub | The Global Academic Ecosystem",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   description: "The global nexus for ambitious learners, elite educators, and pioneering researchers. Master your curriculum and publish groundbreaking research.",
   keywords: ["academic ecosystem", "verified tutors", "research publications", "online assessments", "study guides"],
-  authors: [{ name: "StudyHub Inc.", url: "https://studylite.com/about" }],
+  authors: [{ name: "StudyHub Inc.", url: "https://studylite.online/about" }],
   creator: "StudyHub",
   openGraph: {
     type: "website",
@@ -82,10 +82,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "StudyHub by Localsoko",
-    "url": "https://studylite.com",
+    "url": "https://studylite.online",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://studylite.com/search?q={search_term_string}",
+      "target": "https://studylite.online/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
